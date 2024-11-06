@@ -1,9 +1,10 @@
-create or replace storage integration s3_init_streaming_bucket
-    type = external_stage
-    storage_provider = S3
-    enabled = true
-    storage_aws_role_arn = 'arn:aws:iam::533267399285:role/snowflake-s3-connection'
-    storage_allowed_locations = ('s3://dw-snowflake-learning-sn/stream_data/');
+-- removed for privacy
+-- create or replace storage integration s3_init_streaming_bucket
+    -- type = external_stage
+    -- storage_provider = S3
+    -- enabled = true
+    -- storage_aws_role_arn = ''
+    -- storage_allowed_locations = ('');
 
 
 
@@ -30,4 +31,3 @@ copy into customer_raw
 from @SCD_PROJECT.SCD2.customer_ext_stage;
 
 show pipes;
-select count(*) from customer_raw;

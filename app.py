@@ -1,18 +1,21 @@
 from faker import Faker
 import csv
-import random
-from decimal import Decimal
 from datetime import datetime as dt
+import time
 
 RECORD_COUNT = 10000
 fake = Faker()
 
-current_time = dt.now().strftime("%Y%m%d%H%M%S")
-print(current_time)
+
+def update_time_stamp():
+    current_time = dt.now().strftime("%Y%m%d%H%M%S")
+    return current_time
 
 
-def create_csv_file():
-    with open(f"FakeDataset/customer_{current_time}.csv", "w", newline="") as csvfile:
+def create_csv_file(time_stamp):
+    with open(
+        f"nifi/nifi_shared_data/customer_{time_stamp}.csv", "w", newline=""
+    ) as csvfile:
         fieldnames = [
             "customer_id",
             "first_name",
@@ -29,7 +32,7 @@ def create_csv_file():
         for i in range(RECORD_COUNT):
             writer.writerow(
                 {
-                    "customer_id": i,  # fake.random_int(min=1, max=10000),
+                    "customer_id": i,
                     "first_name": fake.first_name(),
                     "last_name": fake.last_name(),
                     "email": fake.email(),
@@ -42,4 +45,20 @@ def create_csv_file():
 
 
 if __name__ == "__main__":
-    create_csv_file()
+    file_counter = 0
+    try:
+        while True:
+            current_time = update_time_stamp()
+            file_counter += 1
+
+            print(f"Generating fake data, Batch #: {file_counter} at {current_time}.")
+
+            create_csv_file(current_time)
+
+            time.sleep(150)
+
+    except KeyboardInterrupt:
+        print("Generation stopped manually.")
+
+    finally:
+        print(f"{file_counter} batches generated, final file time: {current_time}.")

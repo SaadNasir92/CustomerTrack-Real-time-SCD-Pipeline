@@ -161,3 +161,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 snowflake-project.pem
+s3_bucket_keys_nifi.csv
+notes_docker_ec2.txt

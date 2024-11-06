@@ -38,4 +38,5 @@ create or replace table customer_raw (
      country varchar);
      
 create or replace stream customer_table_changes on table customer;
+desc stream customer_table_changes;
 

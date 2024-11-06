@@ -1,21 +1,4 @@
----
-# ----------------------------------------------------------------------------------------
-version: "3.6"
-volumes:
-  shared-workspace:
-    name: "hadoop-distributed-file-system"
-    driver: local
 services:
-  jupyterlab:
-    image: pavansrivathsa/jupyterlab
-    hostname: JUPYTERLAB
-    container_name: jupyterlab
-    ports:
-      - 4888:4888
-      - 4040:4040
-      - 8050:8050
-    volumes:
-      - shared-workspace:/opt/workspace
   zookeeper:  # the configuration manager
     hostname: ZOOKEEPER
     container_name: zookeeper
@@ -38,5 +21,4 @@ services:
       - NIFI_ELECTION_MAX_WAIT=1 min
       - NIFI_SENSITIVE_PROPS_KEY=vvvvvvvvvvvv
     volumes:
-      - shared-workspace:/opt/workspace/nifi
-...
+      - "./nifi/nifi_shared_data:/opt/nifi/input"

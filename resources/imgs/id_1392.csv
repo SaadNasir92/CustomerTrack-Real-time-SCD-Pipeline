@@ -1,0 +1,6 @@
+CUSTOMER_ID,FIRST_NAME,LAST_NAME,EMAIL,STREET,CITY,STATE,COUNTRY,START_TIME,END_TIME,IS_CURRENT
+1392,Bethany,Roberts,shelbyanderson@example.com,8273 Rios Point Apt. 248,East Vanessaborough,Oklahoma,Germany,2024-11-05 22:04:23.441,9999-12-31 00:00:00.000,true
+1392,Crystal,Diaz,brookeclements@example.org,2675 Ashley Crossing,Toddview,Tennessee,Libyan Arab Jamahiriya,2024-11-05 22:02:23.812,2024-11-05 22:04:23.441,false
+1392,Brittany,Rojas,mark20@example.org,9082 Michaela Rue Apt. 011,East Christineberg,Maryland,Isle of Man,2024-11-05 22:00:23.862,2024-11-05 22:02:23.812,false
+1392,Caleb,Davis,jennifermay@example.net,24914 Jones Hollow Apt. 582,Wagnerland,Colorado,Spain,2024-11-05 21:54:23.372,2024-11-05 21:57:23.343,false
+1392,Kevin,Le,maciassamantha@example.com,98061 Herrera Lodge,Michelleburgh,South Dakota,Bhutan,2024-11-05 21:57:23.343,2024-11-05 22:00:23.862,false

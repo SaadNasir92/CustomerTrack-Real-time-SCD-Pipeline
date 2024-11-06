@@ -1,0 +1,6 @@
+CUSTOMER_ID,FIRST_NAME,LAST_NAME,EMAIL,STREET,CITY,STATE,COUNTRY,START_TIME,END_TIME,IS_CURRENT
+9111,Joseph,Mccullough,garciacatherine@example.net,0929 Lisa Loaf,Marissabury,Connecticut,Anguilla,2024-11-05 22:02:23.812,2024-11-05 22:04:23.441,false
+9111,Angela,Mann,ycarr@example.org,619 Greg Village Apt. 892,East Garyport,Ohio,Ireland,2024-11-05 22:00:23.862,2024-11-05 22:02:23.812,false
+9111,David,Craig,stephanieanderson@example.org,276 Sims Station,Nancyborough,Oregon,Qatar,2024-11-05 21:57:23.343,2024-11-05 22:00:23.862,false
+9111,Caitlin,Randolph,christopherburton@example.org,37324 Karen Drives Apt. 957,South Timothyfurt,Colorado,Saint Lucia,2024-11-05 21:54:23.372,2024-11-05 21:57:23.343,false
+9111,Mary,Wilson,adamroberts@example.net,9330 Hamilton Fords Apt. 585,Nicoleburgh,Ohio,Norway,2024-11-05 22:04:23.441,9999-12-31 00:00:00.000,true
