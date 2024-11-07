@@ -1,4 +1,4 @@
--- Vieew to format and capture changes from Stream that is present on customer (final table) to use to update the customer_history table (SCD2 table)
+-- View to format and capture changes from Stream that is present on customer (final table) to use to update the customer_history table (SCD2 table)
 create or replace view v_customer_changing_data as (
 --INSERT/FALSE - NEW ROW
 with insert_row as (
