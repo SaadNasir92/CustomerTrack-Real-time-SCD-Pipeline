@@ -7,7 +7,7 @@ CustomerTrack is a sophisticated real-time data pipeline that demonstrates enter
 
 ## Technical Highlights
 - Real-time data streaming pipeline
-- Containerized data generation service
+- Containerized flow on a containerized VM
 - Cloud-based infrastructure (AWS)
 - Automated data ingestion and processing
 - Implementation of both SCD1 and SCD2 patterns
@@ -32,7 +32,7 @@ CustomerTrack is a sophisticated real-time data pipeline that demonstrates enter
 ### Data Processing Layer
 - Snowflake for data warehousing
 - Snowpipe for automated data loading
-- Stream-based change data capture
+- Snow Stream for change data capture
 - Scheduled data processing tasks
 
 Snowpipe Creation:
@@ -132,6 +132,17 @@ The separation of SCD1 and SCD2 tables reflects real-world requirements where:
 ```yaml
 # Reference: docker-compose.yml
 # Container setup for NiFi and ZooKeeper
+# Snippet of Docker Compose file
+volumes:
+  shared-workspace:
+    name: "hadoop-distributed-file-system"
+    driver: local
+services:
+  jupyterlab:
+      image: pavansrivathsa/jupyterlab
+      hostname: JUPYTERLAB
+      container_name: jupyterlab
+   # Please refer to docker-compose file for rest of code. 
 ```
 
 ### Data Processing Logic
@@ -230,6 +241,14 @@ update_row_delete as (
 ----------- Please refer to SQL file for full query.
 ```
 
+### SCD1 & SDC2 Table Examples
+-----
+**Production/SCD1 Table:**
+![SCD1](resources/imgs/record1392_scd1.png)
+
+Historical/SCD2 Table:
+![SCD2](resources/imgs/record1392_scd2.png)
+----
 ## Technical Capabilities Demonstrated
 
 1. **Data Engineering**
